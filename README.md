@@ -1,7 +1,7 @@
 >**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
 
 ### Date created
-06/21/2021
+Monday, June 21, 2021
 
 ### Project Title
 Using Python to Understand U.S. Bikeshare Data
@@ -23,4 +23,4 @@ new_york_city -- NYC bikeshare data (not included in the repo)
 washington -- Washington DC bikeshare data (not included in the repo)
 
 ### Credits
-This project is credited to Udacity's Programming for Data Science with Python Nanodegree Program. 
+This project is credited to Udacity's Programming for Data Science with Python Nanodegree Program.
