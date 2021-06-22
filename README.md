@@ -19,8 +19,8 @@ This interactive environment also allows audiences to choose whether or not view
 Here is the list of the files used:
 bikeshare.py -- the python code used for calculating the statistics and building the filters
 chicago.csv -- Chicago bikeshare data (not included in the repo)
-new_york_city -- NYC bikeshare data (not included in the repo)
-washington -- Washington DC bikeshare data (not included in the repo)
+new_york_city.csv -- NYC bikeshare data (not included in the repo)
+washington.csv -- Washington DC bikeshare data (not included in the repo)
 
 ### Credits
 This project is credited to Udacity's Programming for Data Science with Python Nanodegree Program.
