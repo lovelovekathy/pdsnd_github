@@ -2,7 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 
-#Load in Data 
+#Load in Data
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -19,8 +19,8 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = input("Would you like to see data for Chicago, New York, or Washington?\n").lower()
-    valid1 = {'chicago','new york','washington'}    
-    while city not in valid1: 
+    valid1 = {'chicago','new york','washington'}
+    while city not in valid1:
         print('Invalid input. Please type valid city names.')
         city = input("Would you like to see data for Chicago, New York, or Washington?").lower()
 
@@ -34,7 +34,7 @@ def get_filters():
     if choose_filter in {'both'}:
         month = input("Which month do you want to look at? (Choose from january, february, march, april,may, and june.)\n")
         valid3 = {'january','february','march','april','may','june'}
-        while month not in valid3: 
+        while month not in valid3:
             print('Invalid input. Please enter lowercase letters for months.')
             month = input("Which month do you want to look at? (Choose from january, february, march, april,may, and june.)\n")
         day = input("Which day? Please type your response as an integer (e.g., 1 = Sunday).\n")
@@ -45,13 +45,13 @@ def get_filters():
     elif choose_filter in {'month'}:
         month = input("Which month do you want to look at? (Choose from january, february, march, april,may, and june.)\n")
         valid3 = {'january','february','march','april','may','june'}
-        while month not in valid3: 
+        while month not in valid3:
             print('Invalid input. Please enter lowercase letters for months.')
             month = input("Which month do you want to look at? (Choose from january, february, march, april,may, and june.)\n")
         day = 'all'
-    
+
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-    elif choose_filter in {'day'}: 
+    elif choose_filter in {'day'}:
         day = input("Which day? Please type your response as an integer (e.g., 1 = Sunday).\n")
         valid4 = {'1','2','3','4','5','6','7','all'}
         while day not in valid4:
@@ -96,7 +96,7 @@ def load_data(city, month, day):
         # use the index of the months list to get the corresponding int
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
-    
+
         # filter by month to create the new dataframe
         df = df[df['month']==month]
 
@@ -176,7 +176,7 @@ def trip_duration_stats(df):
 
     # TO DO: display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
-    print("Mean Travel Time: ",mean_travel_time) 
+    print("Mean Travel Time: ",mean_travel_time)
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -206,13 +206,13 @@ def user_stats(df):
     #print(most_recent_year_birth)
     most_common_year_birth = df['Birth Year'].mode()[0]
     #print (most_common_year_birth)
-    
+
     print("The oldest customer was born in: {}. \nThe youngest customer was born in: {}. \nThe customers' most common year of birth is: {}".format(earliest_year_birth,most_recent_year_birth,most_common_year_birth))
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
+    
 
 def main():
     while True:
@@ -223,17 +223,17 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         valid6 = {'new york','chicago'}
-        if city not in valid6: 
+        if city not in valid6:
             print('User Data Not Available for This City.')
             print('-'*40)
-        else: 
+        else:
             user_stats(df)
-    
-    #Script should prompt the user if they want to see 5 lines of raw data, 
-    #display that data if the answer is 'yes', 
+
+    #Script should prompt the user if they want to see 5 lines of raw data,
+    #display that data if the answer is 'yes',
     #and continue these prompts and displays until the user says 'no'.
     #return most_common_month, most_common_dayofweek, most_common_hour
-     
+
         see_data = input("Do you want to see 5 lines of raw data? \n Type y or n: ")
         valid5 = {'y','n'}
         while see_data not in valid5:
